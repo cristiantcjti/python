@@ -1,0 +1,8 @@
+.idea/
+venv
+.venv
+.env
+pyc
+__pycache__
+data.db
+gen_token.py
