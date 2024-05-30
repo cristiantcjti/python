@@ -17,13 +17,13 @@ repos:
 
   - repo: local
     hooks:
-      - id: ruff check
+      - id: ruff-check
         name: ruff check
         entry: ruff check --select I --fix src
         language: system
         always_run: true
         pass_filenames: false
-      - id: ruff format
+      - id: ruff-format
         name: ruff format
         entry: ruff format /home/cristian/Desktop/python/python/clean_architecture/src
         language: system
