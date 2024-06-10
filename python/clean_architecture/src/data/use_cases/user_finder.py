@@ -8,4 +8,14 @@ class UserFinder(UserFinderInterface):
         self._users_repository = users_repository
 
     def find(self, first_name: str) -> Dict:
-        pass
+        if not first_name.isalpha():
+            raise Exception("Invalid name for searching")
+
+        if len(first_name) > 18:
+            raise Exception("Name too long")
+
+        users = self._users_repository.select_user(first_name)
+        if users == []:
+            raise Exception("User not found")
+
+        return {"type": "users", "count": len(users), "attributes": users}
