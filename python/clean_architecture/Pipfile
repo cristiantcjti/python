@@ -45,6 +45,7 @@ wrapt= "==1.15.0"
 zipp= "==3.16.2"
 python-decouple = "==3.8"
 psycopg2-binary = "==2.9.9"
+pytest-mock = "==3.14.0"
 
 [dev-packages]
 ruff = "==0.4.5"
