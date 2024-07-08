@@ -8,11 +8,6 @@ class UserFinder(UserFinderInterface):
     def __init__(self, users_repository: UsersRepositoryInterface) -> None:
         self._users_repository = users_repository
 
-    def find(self, first_name: str) -> Dict:
-        self._validate_name(first_name)
-        users = self._search_user(first_name)
-        return self._format_response(users)
-
     @classmethod
     def _validate_name(cls, first_name: str):
         if not first_name.isalpha():
@@ -31,3 +26,8 @@ class UserFinder(UserFinderInterface):
     def _format_response(cls, users: list[Users]) -> dict:
         users = [{"first_name": user.first_name, "age": user.age} for user in users]
         return {"type": "users", "count": len(users), "attributes": users}
+
+    def find(self, first_name: str) -> Dict:
+        self._validate_name(first_name)
+        users = self._search_user(first_name)
+        return self._format_response(users)
