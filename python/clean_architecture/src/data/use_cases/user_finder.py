@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict
 from src.data.interfaces.users_repository import UsersRepositoryInterface
 from src.domain.models.users import Users
 from src.domain.use_cases.user_finder import UserFinder as UserFinderInterface
