@@ -6,7 +6,7 @@ from src.infra.db.settings.base import base
 class Users(base):
     __tablename__ = "users"
 
-    id = Column(Uuid, primary_key=True, default=uuid.uuid4())
+    id = Column(UUID, primary_key=True, default=uuid.uuid4())
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
     age = Column(Integer, nullable=False)

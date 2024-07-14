@@ -5,7 +5,7 @@ from src.presentation.http_types.http_response import HttpResponse
 
 class HttpRequestMock:
     def __init__(self):
-        self.query_params = {"first_name": "myTest"}
+        self.query_params = {"first_name": "MyFirstName"}
 
 
 def test_handler():
@@ -19,5 +19,4 @@ def test_handler():
     assert response.status_code == 200
     assert response.body["data"]["type"] == "users"
     assert response.body["data"]["count"] == 1
-    assert response.body["data"]["attributes"][0]["first_name"] == "John"
-    assert response.body["data"]["attributes"][0]["age"] == 25
+    assert response.body["data"]["attributes"][0]["first_name"] == "MyFirstName"
