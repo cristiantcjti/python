@@ -23,7 +23,7 @@ class TestUserRegister:
         first_name = "NameTest123"
         last_name = "LastNameTest"
         age = 25
-        expected_error_message = "Invalid name for searching"
+        expected_error_message = "Invalid name for registration"
 
         repo = UsersRepositorySpy()
         user_register = UserRegister(repo)
