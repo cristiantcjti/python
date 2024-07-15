@@ -1,2 +1,3 @@
 from .http_bad_request import HttpBadRequestError
 from .http_not_found import HttpNotFoundError
+from .http_uprocessable_entity import HttpUnprocessableEntityError
