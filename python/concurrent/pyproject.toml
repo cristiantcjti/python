@@ -1,0 +1,16 @@
+[project]
+name = "async-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles>=24.1.0",
+    "aiohttp[speedups]>=3.11.16",
+    "beautifulsoup4>=4.13.4",
+    "cython>=3.1.2",
+    "fastapi>=0.116.1",
+    "flask>=3.1.2",
+    "setuptools>=80.9.0",
+    "uvicorn>=0.35.0",
+]
